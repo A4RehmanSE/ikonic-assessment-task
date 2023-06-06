@@ -27,7 +27,6 @@ class MerchantController extends Controller
      */
     public function orderStats(Request $request): JsonResponse
     {
-        // TODO: Complete this method
         $from = $request->input('from');
         $to = $request->input('to');
 

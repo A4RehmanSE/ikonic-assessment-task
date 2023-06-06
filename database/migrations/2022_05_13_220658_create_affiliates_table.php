@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('merchant_id');
-            // TODO: Replace me with a brief explanation of why floats aren't the correct data type, and replace with the correct data type.
             /**
              * The reason floats may not be the correct data type for a commission rate is that floats are approximate numeric data types 
              * and can result in rounding errors. 

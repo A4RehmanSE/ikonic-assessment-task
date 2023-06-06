@@ -11,7 +11,8 @@ class WebhookController extends Controller
 {
     public function __construct(
         protected OrderService $orderService
-    ) {}
+    ) {
+    }
 
     /**
      * Pass the necessary data to the process order method
@@ -21,7 +22,6 @@ class WebhookController extends Controller
      */
     public function __invoke(Request $request): JsonResponse
     {
-        // TODO: Complete this method
         $data = $request->all();
 
         $this->orderService->processOrder($data);

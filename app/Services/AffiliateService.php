@@ -30,7 +30,6 @@ class AffiliateService
      */
     public function register(Merchant $merchant, string $email, string $name, float $commissionRate): Affiliate
     {
-        // TODO: Complete this method
         // Check if the email already exists as a user
         $existingUser = User::where('email', $email)->first();
 

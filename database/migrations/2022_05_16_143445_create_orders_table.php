@@ -18,7 +18,6 @@ return new class extends Migration
             $table->id();
             $table->foreignId('merchant_id')->constrained();
             $table->foreignId('affiliate_id')->nullable()->constrained();
-            // TODO: Replace floats with the correct data types (very similar to affiliates table)
             /**
              * Since financial calculations require precision, 
              * it is recommended to use the decimal data type instead of float.

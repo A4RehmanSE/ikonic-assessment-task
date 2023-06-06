@@ -24,7 +24,6 @@ class OrderService
      */
     public function processOrder(array $data)
     {
-        // TODO: Complete this method
 
         // Check for duplicate orders based on order_id
         $existingOrder = Order::where('external_order_id', $data['order_id'])->first();

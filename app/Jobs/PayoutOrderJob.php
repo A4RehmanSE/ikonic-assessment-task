@@ -34,7 +34,6 @@ class PayoutOrderJob implements ShouldQueue
      */
     public function handle(ApiService $apiService)
     {
-        // TODO: Complete this method
         // Perform the payout using the API service
         try {
             $apiService->sendPayout($this->order->affiliate->user->email, $this->order->commission_owed);

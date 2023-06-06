@@ -21,7 +21,6 @@ class MerchantService
      */
     public function register(array $data): Merchant
     {
-        // TODO: Complete this method
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -48,7 +47,6 @@ class MerchantService
      */
     public function updateMerchant(User $user, array $data)
     {
-        // TODO: Complete this method
         $user->update([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -73,7 +71,6 @@ class MerchantService
      */
     public function findMerchantByEmail(string $email): ?Merchant
     {
-        // TODO: Complete this method
         $user = User::where('email', $email)->first();
 
         if ($user && $user->merchant) {
@@ -92,7 +89,6 @@ class MerchantService
      */
     public function payout(Affiliate $affiliate)
     {
-        // TODO: Complete this method
         $affiliate->orders()
             ->where('payout_status', Order::STATUS_UNPAID)
             ->chunk(100, function ($orders) {
